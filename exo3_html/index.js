@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 // macOS, Linux, and Windows
-fs.readFileSync('/assets/index.html');
+const content = fs.readFileSync('assets/index.html', 'utf-8');
 // => [Error: EISDIR: illegal operation on a directory, read <directory>]
 
+console.log(content);
